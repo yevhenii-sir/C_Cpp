@@ -11,6 +11,7 @@ int main()
     printf("\ta - b = %d\n", a - b);
     printf("\ta * b = %d\n", a * b);
     printf("\ta / b = %.2f", a / (float)(b));
+    printf("\nCreate By Yevhenii Sirenko\n");
     getch();
     return 0;
 }
