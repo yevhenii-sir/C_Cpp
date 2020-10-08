@@ -10,7 +10,7 @@ int main()
     h = (sek % 86400) / 3600;
     min = ((sek % 86480) % 3600) / 60;
     sek = ((sek % 86480) % 3600) % 60;
-    printf("\n h = %ld \n min =  %ld \n sek = %ld", h, min, sek);
+    printf("\n Годин = %ld; \n Хвилин = %ld; \n Секунд = %ld;\n", h, min, sek);
     printf("\nCreate By Yevhenii Sirenko\n");
     getch();
     return 0;
