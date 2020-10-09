@@ -1,2 +1,2 @@
-# C
-My C library
+# C/C++
+My C/C++ library
