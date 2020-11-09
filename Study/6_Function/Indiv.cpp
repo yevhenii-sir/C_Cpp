@@ -17,10 +17,10 @@ int main()
     scanf("%f%f%f", &a, &b, &c);
     printf("Введіть x1, x2, d: ");
     scanf("%f%f%f", &x1, &x2, &d);
-    max = F(x1);
+    max = F(x1, a, b, c);
     while (x2 >= x1)
     {
-        Fx = F(x1);
+        Fx = F(x1, a, b, c);
         printf("F(%.2f) = (%.2f * %.2f^2 + %.2f)/(%.2f - %.2f) = %.2f\n",x1, a, x1, b, x1, c,Fx);
         if (max < Fx) max = Fx;
         x1 += d;
