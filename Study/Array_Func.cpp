@@ -17,18 +17,19 @@ void Vivod(int A[], int N)
 	printf("\nМасив: ");
 	for (int i = 0; i < N; i++)
 		printf("%4d", A[i]);
+	printf("\n");
 
 }
 
-void ZapRand(int A[], int &N)
+void ZapRand(int *A, int *N)
 {
 	printf("Введіть розмір масиву: ");
-	scanf("%d", &N);
-	printf("Масив: ");
-	for (int i = 0; i < N; i++)
+	scanf("%d", N);
+	//printf("Масив: ");
+	for (int i = 0; i < *N; i++)
 	{
 		A[i] = rand()%100 - 50;
-		printf("%4d", A[i]);
+		//printf("%4d", A[i]);
 	}
 }
 
