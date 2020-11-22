@@ -3,7 +3,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include "../Array_Func.cpp"
-using namespace std;
 
 void Offset_array(int *array, int *array_size, int *offset_size)
 {
