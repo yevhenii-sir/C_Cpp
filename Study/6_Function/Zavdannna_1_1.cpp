@@ -27,7 +27,8 @@ void parn(int a)
 
 float chaska(int a, int b)
 {
-    if ((b != 0)) return (a / b); else return 0;
+    return ((b != 0) ? (a / (float)b) : 0);
+    //if ((b != 0)) return (a / (float)b); else return 0;
 }
 
 int main()

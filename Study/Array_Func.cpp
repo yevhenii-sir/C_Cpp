@@ -12,6 +12,13 @@ void Vvod(int A[],int &N)
 	}
 }
 
+int len(char S[])
+{
+	int i;
+	for(i = 0; S[i] != '\0'; i++);
+	return i;
+}
+
 void Vivod(int A[], int N)
 {
 	printf("\nМасив: ");
