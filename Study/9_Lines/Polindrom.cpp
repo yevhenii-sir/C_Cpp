@@ -11,8 +11,6 @@ int main()
     strcpy(s2, s1);
     strupr(s1);
     strupr(strrev(s2));
-    puts(s1);
-    puts(s2);
     int i = 0;
     while (s1[i] != '\0') {
         if (s1[i] != s2[i]) {

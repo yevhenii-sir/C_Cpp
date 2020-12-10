@@ -9,6 +9,11 @@ int main()
     int length_s = 0;
     printf("Vvedit stroku: ");
     gets(s);
+    //double n = strtod(s);
+   // printf("N = %lf", n);
+
+    printf("Vvedit stroku: ");
+    gets(s);
     //scanf("%s", s);
     int i = 0;
     while (s[i] != '\0') {
