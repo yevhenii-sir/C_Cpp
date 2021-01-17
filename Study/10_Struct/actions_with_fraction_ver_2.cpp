@@ -10,36 +10,36 @@ struct fraction
         int denumerator;
     };
 
-void input_fraction(fraction &x)
+void input_fraction(fraction *x)
 {
     system("CLS");
     printf("Введіть чисельник і знаменник: ");
-    scanf("%d%d", &x.numerator, &x.denumerator);
-    while (x.denumerator == 0) {
+    scanf("%d%d", &x->numerator, &x->denumerator);
+    while (x->denumerator == 0) {
         printf("Знаменник не може дорівнювати нулю!\nВведіть його ще раз: ");
-        scanf("%d", &x.denumerator);
+        scanf("%d", &x->denumerator);
     }
 }
 
-void output_fraction(fraction x)
+void output_fraction(fraction *x)
 {
-    printf("Дріб:\n\n %d\n ", x.numerator);
-    int length_numerator = (int)(x.numerator ? log10(x.numerator) + 1 : 1);
-    int length_denumerator = (int)(x.denumerator ? log10(x.denumerator) + 1 : 1);
+    printf("Дріб:\n\n %d\n ", x->numerator);
+    int length_numerator = (int)(x->numerator ? log10(x->numerator) + 1 : 1);
+    int length_denumerator = (int)(x->denumerator ? log10(x->denumerator) + 1 : 1);
     length_numerator = ((length_numerator < length_denumerator) ? length_denumerator : length_numerator);
     for (int i = 1; i < length_numerator + 1; i++) printf("-");
-    printf("\n %d \n", x.denumerator);
+    printf("\n %d \n", x->denumerator);
 }
 
-void warp_fraction(fraction &x)
+void warp_fraction(fraction *x)
 {
     int temp;
-    temp = x.numerator;
-    x.numerator = x.denumerator;
-    x.denumerator = temp;
-    while (x.denumerator == 0) {
+    temp = x->numerator;
+    x->numerator = x->denumerator;
+    x->denumerator = temp;
+    while (x->denumerator == 0) {
         printf("Знаменник після обміну дорівнює нулю.\n Введіть значення: ");
-        scanf("%d", &x.denumerator);
+        scanf("%d", &x->denumerator);
     }
     printf("Готово!");
     getch();
@@ -51,14 +51,15 @@ int reduce(int x, int y)
 }
 
 
-float decimal_equivalent(fraction &x)
+float decimal_equivalent(fraction *x)
 {
-    return (float)x.numerator / x.denumerator;
+    return (float)x->numerator / x->denumerator;
 }
 
 int main() 
 {
-    fraction fraction_struc;
+    fraction fraction_struc, *fraction_pointer;
+    fraction_pointer = &fraction_struc;
     int common_divisor;
     int menu_number;
     do {
@@ -71,17 +72,17 @@ int main()
         switch (menu_number)
         {
         case 1:{
-            input_fraction(fraction_struc);
+            input_fraction(fraction_pointer);
             break;
         }
         case 2:{
             system("CLS");
-            output_fraction(fraction_struc);
+            output_fraction(fraction_pointer);
             getch();
             break;
         }
         case 3:{
-            warp_fraction(fraction_struc);
+            warp_fraction(fraction_pointer);
             break;
         }
         case 4:{
@@ -89,14 +90,14 @@ int main()
             printf("Спільний дільник: %d\n", common_divisor);
             fraction_struc.numerator /= common_divisor;
             fraction_struc.denumerator /= common_divisor;
-            output_fraction(fraction_struc);
+            output_fraction(fraction_pointer);
             getch();
             break;
         }
         case 5:{
             system("CLS");
-            output_fraction(fraction_struc);
-            printf("\nДесятковий еквівалент: %.4f", decimal_equivalent(fraction_struc));
+            output_fraction(fraction_pointer);
+            printf("\nДесятковий еквівалент: %.4f", decimal_equivalent(fraction_pointer));
             getch();
             break;
         }
