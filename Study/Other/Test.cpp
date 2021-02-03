@@ -1,25 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
 #include <string.h>
- 
 
- struct Drib
- {
-  int Ch;
-  int Zn;
- }; Drib a;
- 
-Drib f_inpDrib(Drib a)
+struct point
 {
-	printf("Дрiб: \n\t%d\n\t-\n\t%d", a.Ch, a.Zn);
-}
+    int x, y;
+};
+
+struct rect
+{
+    point point1, point2;
+};
 
 int main()
 {
-// setlocale(LC_ALL, "Ukrainian");
- Drib ch1, zn1, scorochDrib;
- printf("Введiть чисельник i знаменник: ");
- scanf("%d%d",&a.Ch,&a.Zn);
- f_inpDrib(a);
- return 0;
+    rect x[2], *y;
+    //*x = main_x;
+    y = &x[2];
+    y[1].point1.x = 10;
+    x[1].point1.y = 20;
+    printf("point[1].point 1 = %d", x[1].point1.x);
+    scanf("%d", &x[2].point1.x);
+    printf("point[2].point 1 = %d", x[2].point1.x);
+    return 0;
 }
