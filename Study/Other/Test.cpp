@@ -1,27 +1,33 @@
 #include <stdio.h>
 #include <conio.h>
-#include <math.h>
+#include <stdlib.h>
 #include <string.h>
 
-struct point
+struct info_product
 {
-    int x, y;
+    char name_product[25];
+    int price_product;
+    int unique_number;
 };
 
-struct rect
+void write_to_file()
 {
-    point point1, point2;
-};
 
-int main()
+}
+
+int main
 {
-    rect x[2], *y;
-    //*x = main_x;
-    y = &x[2];
-    y[1].point1.x = 10;
-    x[1].point1.y = 20;
-    printf("point[1].point 1 = %d", x[1].point1.x);
-    scanf("%d", &x[2].point1.x);
-    printf("point[2].point 1 = %d", x[2].point1.x);
-    return 0;
+    short int menu;
+    do {
+        switch (menu)
+        {
+        case 1: {
+            write_to_file;
+            break;
+        }    
+        case 0: return 0;
+        default:
+            break;
+        }
+    } while (1);
 }
