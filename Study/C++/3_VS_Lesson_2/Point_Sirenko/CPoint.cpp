@@ -24,15 +24,31 @@ void CPoint::Show()
 	std::cout << "x = " << x << "\ny = " << y << std::endl;
 }
 
-void CPoint::Move(int _x, int _y)
+void CPoint::Move(int dx, int dy)
 {
-	x = _x;
-	y = _y;
+	x += dx;
+	y += dy;
 }
 
 double CPoint::Dist(const CPoint& pt)
 {
 	return (sqrt(pow(pt.x - x, 2) + pow(pt.y - y, 2)));
+}
+
+double CPoint::operator-(CPoint& pt)
+{
+	return Dist(pt);
+}
+
+void CPoint::operator++()
+{
+	x++;
+	y++;
+}
+
+int CPoint::operator==(CPoint& pt)
+{
+	return (x == pt.x && y == pt.y);
 }
 
 void CPoint::Avtor()
