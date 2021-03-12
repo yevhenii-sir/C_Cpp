@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include <iomanip>
-using namespace std;
 
 class Test {
 	int size;
@@ -24,7 +23,7 @@ public:
 	{
 		for (int i = 0; i < size; i++)
 		{
-			std::cout << setw(5) << arrp[i];
+			std::cout << std::setw(5) << arrp[i];
 		}
 		std::cout << std::endl;
 	}
