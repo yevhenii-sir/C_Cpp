@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <iomanip>
+#include <ctime>
 
 class Test {
 	int size;
@@ -41,6 +42,7 @@ public:
 
 int main()
 {
+	srand(time(NULL));
 	int size_a;
 	std::cout << "Input size array: ";
 	std::cin >> size_a;
