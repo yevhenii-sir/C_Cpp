@@ -4,9 +4,9 @@
 int main()
 {
     int a, b, sum;
-    printf("Введите числа А и В: ");
+    printf("Input A and B: ");
     scanf("%d%d", &a, &b);
     sum = a + b;
-    printf("Результат %d + %d = %d\n", a, b, sum);
+    printf("Result %d + %d = %d\n", a, b, sum);
     return 0;
 }

@@ -5,7 +5,7 @@
 int main (void)
 {
     int x, n, i = 0, sum = 0;
-    randomize();
+    //randomize();
     printf("\nVvedi kilkist chisel N = ");
     scanf("%d", &n);
     printf(" Zadumani chisla : \n");
@@ -15,7 +15,7 @@ int main (void)
         printf("%4d", x);
         sum += x;
     }
-    printf("\n Suma = %d \n Sered znach = %.2f", sum, sum / float(n));
+    printf("\n Suma = %d \n Sered znach = %.2f", sum, sum / (float)(n));
     printf("\nCreate by Yevhenii Sirenko");
     getch();
 }

@@ -7,10 +7,10 @@ int main()
 {
     int n = 1, ch = HIGH, cl = LOW, chislo = (HIGH + LOW) / 2;
     char c;
-    printf("Р—Р°РґСѓРјР°Р№ С‡РёСЃР»Рѕ РІС–Рґ %d РґРѕ %d, Р° СЏ СЃРїСЂРѕР±СѓСЋ СѓРіР°РґР°С‚Рё Р№РѕРіРѕ\n\n", cl, ch);
-    printf("CРєР°Р¶Рё СЏРєС‰Рѕ СѓРіР°РґР°Р»Р°, ");
-    printf("b - СЏРєС‰Рѕ Р±С–Р»СЊС€Рµ, m - РјРµРЅС€Рµ\n");
-    printf("    Р†С‚Р°Рє, РІР°С€Рµ С‡РјСЃР»Рѕ %d?\n", chislo);
+    printf("Задумай число від %d до %d, а я спробую угадати його\n\n", cl, ch);
+    printf("Cкажи якщо угадала, ");
+    printf("b - якщо більше, m - менше\n");
+    printf("    Ітак, ваше чмсло %d?\n", chislo);
     while ((c = getchar()) != 'y')
     {
         if (c != '\n');
@@ -20,7 +20,7 @@ int main()
                 ++n;
                 ch = chislo - 1;
                 chislo = (ch + cl) / 2;
-                printf("РњРЅРѕРіРѕРІР°С‚Рѕ Р±СѓРґРµ. РњРѕР¶Рµ %d?\n", chislo);
+                printf("Многовато буде. Може %d?\n", chislo);
             }
             else
              if (c == 'b')
@@ -28,12 +28,13 @@ int main()
                 ++n;
                 cl = chislo + 1;
                 chislo = (ch + cl) / 2;
-                printf("РњР°Р»РѕРІР°С‚Рѕ Р±СѓРґРµ, РјРѕР¶Рµ С†Рµ %d?\n", chislo);
+                printf("Маловато буде, може це %d?\n", chislo);
              }
-             else printf("РџС–РґРєР°Р¶Рё, Р±С–Р»СЊС€Рµ b С‡Рё РјРµРЅС€Рµ m?\n");
+             else printf("Підкажи, більше b чи менше m?\n");
         }
     }
-    printf("РЇ СѓРіР°РґР°Р»Р° Р·Р° %d СЃРїСЂРѕР±!! \n", n);
+    printf("Я угадала за %d спроб!! \n", n);
     printf("\nCreate by Yevhenii Sirenko");
     getch();
 }
+

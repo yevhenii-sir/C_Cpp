@@ -11,10 +11,11 @@ int main()
     scanf("%d%d", &x, &n);
     printf("---------------------------------------");
     Z = 1 + x;
-    for (int i = 2; i <=n; i++)
+    int i, j;
+    for (i = 2; i <=n; i++)
     {
         fact = 1;
-        for (int j = 2; j <= i; j++)
+        for (j = 2; j <= i; j++)
         {
             fact *= j;
         }

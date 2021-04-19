@@ -5,7 +5,7 @@
 int main()
 {
     float a, b, c;
-    printf("Введи значення a, b, c: ");
+    printf("Input value a, b, c: ");
     scanf("%f%f%f", &a, &b, &c);
     float x1, x2, D = (pow(b, 2) - 4 * a * c);
     if (D > 0)
@@ -18,7 +18,7 @@ int main()
         x1 = x2 = -b / (2 * a);
     }
     else {
-        printf("Немає коренів рівняння!\n\nCreate by Yevhenii Sirenko");
+        printf("There are no roots of the equation!\n\nCreate by Yevhenii Sirenko");
         getch();
         exit(0);
     }

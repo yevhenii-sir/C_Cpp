@@ -5,7 +5,7 @@
 int main()
 {
     int a, b;
-    printf("Введи два числа: ");
+    printf("Input two numbers: ");
     scanf("%d%d", &a, &b);
     printf("\ta + b = %d\n", a + b);
     printf("\ta - b = %d\n", a - b);

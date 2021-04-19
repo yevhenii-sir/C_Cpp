@@ -5,7 +5,7 @@
 int main()
 {
     int r;
-    printf("Введіть ваш вік: ");
+    printf("Enter your age: ");
     scanf("%d", &r);
     if ((0 < r)&&(r < 110)) 
     {
@@ -19,7 +19,7 @@ int main()
         }
         else printf("Вам %d років", r);
     }
-    else printf("Введено не вірні дані!");
+    else printf("Incorrect data entered!");
     printf("\n\nCreate by Yevhenii Sirenko");
     getch();
     return 0;

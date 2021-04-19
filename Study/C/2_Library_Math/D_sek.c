@@ -5,12 +5,12 @@
 int main()
 {
     long h, min, sek;
-    printf("Введіть секунди: ");
+    printf("Input second: ");
     scanf("%ld", &sek);  
     h = (sek % 86400) / 3600;
     min = ((sek % 86480) % 3600) / 60;
     sek = ((sek % 86480) % 3600) % 60;
-    printf("\n Годин = %ld; \n Хвилин = %ld; \n Секунд = %ld;\n", h, min, sek);
+    printf("\n Hours = %ld; \n Minutes = %ld; \n Seconds = %ld;\n", h, min, sek);
     printf("\nCreate By Yevhenii Sirenko\n");
     getch();
     return 0;
